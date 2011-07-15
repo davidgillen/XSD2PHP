@@ -1,0 +1,7 @@
+An XML schema to PHP class generator
+Usage: php xsd2php.php <schema.xml>
+Will result in a number of classes being created in the current directory.
+Each class has the following features
+- list of properties representing xml children
+- constructor which validate the children based upon type, and number
+  of occurances.
