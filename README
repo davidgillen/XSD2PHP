@@ -1,7 +1,16 @@
 An XML schema to PHP class generator
+Released under the GPL, see COPYING
+I offer no guarentees, either express or implied, that this software
+and the classes it generates are fit for use. Use at own risk.
+
 Usage: php xsd2php.php <schema.xml>
+
 Will result in a number of classes being created in the current directory.
 Each class has the following features
 - list of properties representing xml children
 - constructor which validate the children based upon type, and number
   of occurances.
+- Doc comments for the constructor
+- validates against the PHPCodeSniffer PEAR coding standard check.
+
+
