@@ -13,4 +13,5 @@ Each class has the following features
 - Doc comments for the constructor
 - validates against the PHPCodeSniffer PEAR coding standard check.
 
+TODO: Change to use the DOM instead of simpleXML
 
