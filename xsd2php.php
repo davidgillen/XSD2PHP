@@ -65,8 +65,8 @@ function processNode( $node )
  * @category Util
  * @package  XSD2PHP
  * @author   David Gillen <david.gillen@nexus451.com>
- * @license  Copyright Nexus451.com
- * @link     http://www.nexus451.com
+ * @license  GNU GPL - http://www.gnu.org/licenses/gpl.txt
+ * @link     https://github.com/davidgillen/XSD2PHP
  */\n\n
 FILEDOCCOMMENT;
     fwrite($fp, $fileDocComment);
@@ -78,7 +78,7 @@ FILEDOCCOMMENT;
  * @category XSD2PHP
  * @package  XSD2PHP
  * @author   David Gillen <david.gillen@nexus451.com>
- * @license  Copyright Nexus451.com
+ * @license  GNU GPL - http://www.gnu.org/licenses/gpl.txt
  * @link     http://www.nexus451.com
  */\n
 CLASSDOCCOMMENT;
