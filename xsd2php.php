@@ -129,7 +129,7 @@ CLASSDOCCOMMENT;
                     $element->simpleType->restriction->minLength['value']
                         = isset($simpleTypeData[ $type ]->minLength)
                         ? $simpleTypeData[ $type ]->minLength
-                        : null;
+                        : 0;
                     $element->simpleType->restriction->maxLength['value']
                         = isset($simpleTypeData[ $type ]->maxLength)
                         ? $simpleTypeData[ $type ]->maxLength
@@ -176,7 +176,7 @@ function getSimpleValidation($element, &$typehints)
     // Make values easier to access and set sane defaults
     $name = (string) $element['name'];
     $restriction = $element->simpleType->restriction['base'];
-    $minLength = $element->simpleType->restriction->minLength['value'];
+    $minLength = isset($element->simpleType->restriction->minLength['value']) ? $element->simpleType->restriction->minLength['value'] : 0;
     $maxLength = $element->simpleType->restriction->maxLength['value'];
     $pattern = $element->simpleType->restriction->pattern['value'];
     $annotation = $element->annotation->documentation;
@@ -397,6 +397,11 @@ function alignTypeHints( $typeHints )
 
     foreach ( $typeHints as $typeHint ) {
         $currentHint = explode(" ", trim($typeHint));
+        // CurrentHint explode to short
+        if(count($currentHint) < 2) {
+          return false;
+        }
+
         if ( strlen($currentHint[2]) > $longestType ) {
             $longestType = strlen($currentHint[2]);
         }
